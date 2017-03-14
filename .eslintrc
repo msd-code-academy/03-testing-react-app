@@ -1,0 +1,30 @@
+{
+  "extends": "react-app",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "jsx-quotes": [
+      "warn",
+      "prefer-double"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+}

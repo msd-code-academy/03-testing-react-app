@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const multiply = (a, b = a) => { /* implement this */};
-const customRound = (value, places) => { /* implement this */};
-const roundForTwo = (val) => value => { /* implement this */};
-const getAreaForCircle = (radius) => { /* implement this */};
+const multiply = (a, b = a) => a * b;
+const customRound = (value, places) => +(value.toFixed(places));
+const roundForTwo = (val) => value => customRound(value, 2);
+const getAreaForCircle = (radius) => multiply(Math.PI, multiply(radius));
 
 describe('First spec', () => {
   describe('multiply', () => {
@@ -41,7 +41,7 @@ describe('First spec', () => {
 
     it('should return area for passed radius and roundDecimals function', () => {
       const roundForDecimals = value => customRound(value, 4);
-      const actual = getAreaForCircle(5, roundForDecimals);
+      const actual = roundForDecimals(getAreaForCircle(5));
       const expected = 78.5398; // don't change this line
 
       expect(actual).toEqual(expected);
